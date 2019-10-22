@@ -1,0 +1,78 @@
+.page-container {
+  display: flex;
+}
+
+.banners {
+  flex: 1;
+}
+
+.container {
+  flex: 3;
+}
+.buttons-container {
+  background-color: lightgrey;
+  text-align: center;
+}
+
+.buttons-container .row {
+  display: flex;
+  justify-content: center;
+  border-style: solid;
+  border-radius: 20px;
+  border-color: gray;
+  border-width: 2px;
+  margin: 5px;
+}
+
+.buttons-container .row .radio {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.buttons-container .row .radio.active {
+  background-color: gray;
+}
+
+.buttons-container .row .radio input {
+  display: none;
+}
+
+.buttons-container .row .radio label {
+  width: 100%;
+}
+
+.divs-container {
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-style: solid;
+  border-color: black;
+}
+
+#item1 {
+  background-color: #cce5ff;
+  color: #004085;
+  min-height: 4em;
+  min-width: 8em;
+}
+#item2 {
+  background-color: #d4edda;
+  color: #155724;
+  min-height: 6em;
+  min-width: 9em;
+}
+#item3 {
+  background-color: #fff3cd;
+  color: #856404;
+  min-height: 8em;
+  min-width: 10em;
+}
+#item4 {
+  background-color: #f8d7da;
+  color: #721c24;
+  min-height: 10em;
+  min-width: 11em;
+}

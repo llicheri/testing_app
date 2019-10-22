@@ -1,0 +1,64 @@
+<div class="page-container">
+  <div class="container">
+    <div class="buttons-container">
+      <h2>flex-direction</h2>
+      <div class="row">
+        <div
+          *ngFor="let el of flexDirectionValues"
+          class="radio"
+          [ngClass]="{ active: flex === el }"
+        >
+          <label [for]="el">{{ el }}</label>
+          <input
+            [id]="el"
+            type="radio"
+            [value]="el"
+            [(ngModel)]="flex"
+            (change)="onRadioChange(el, 'flex')"
+          />
+        </div>
+      </div>
+      <h2>justify-content</h2>
+      <div class="row">
+        <div
+          *ngFor="let el of justifyContentValues"
+          class="radio"
+          [ngClass]="{ active: justify === el }"
+        >
+          <label [for]="'justify' + el">{{ el }}</label>
+          <input
+            [id]="'justify' + el"
+            type="radio"
+            [value]="el"
+            [(ngModel)]="justify"
+            (change)="onRadioChange(el, 'justify')"
+          />
+        </div>
+      </div>
+      <h2>align-items</h2>
+      <div class="row">
+        <div
+          *ngFor="let el of alignItemsValues"
+          class="radio"
+          [ngClass]="{ active: align === el }"
+        >
+          <label [for]="'align-' + el">{{ el }}</label>
+          <input
+            [id]="'align-' + el"
+            type="radio"
+            [value]="el"
+            [(ngModel)]="align"
+            (change)="onRadioChange(el, 'align')"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="divs-container">
+      <div id="item1">Item 1</div>
+      <div id="item2">Item 2</div>
+      <div id="item3">Item 3</div>
+      <div id="item4">Item 4</div>
+    </div>
+  </div>
+  <div class="banners"></div>
+</div>

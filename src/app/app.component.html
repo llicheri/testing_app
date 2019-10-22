@@ -1,0 +1,30 @@
+<h1>Testing app</h1>
+
+<nav>
+  <a (click)="toggleEditor('name')" routerLink="/name" routerLinkActive="active"
+    >Name Editor</a
+  >
+  <a
+    (click)="toggleEditor('profile')"
+    routerLink="/profile"
+    routerLinkActive="active"
+    >Profile Editor</a
+  >
+  <a (click)="toggleEditor('flex')" routerLink="/flex" routerLinkActive="active"
+    >Flex Editor</a
+  >
+  <a (click)="toggleEditor('text')" routerLink="/text" routerLinkActive="active"
+    >Text Editor</a
+  >
+  <a
+    (click)="toggleEditor('flex-trial')"
+    routerLink="/flex-trial"
+    routerLinkActive="active"
+    >Flex Trial</a
+  >
+  <a (click)="toggleEditor('grid')" routerLink="/grid" routerLinkActive="active"
+    >Grid</a
+  >
+</nav>
+
+<router-outlet></router-outlet>
