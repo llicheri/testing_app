@@ -1,30 +1,94 @@
-<h1>Testing app</h1>
+<nav class="navbar navbar-expand-lg fixed-top navbar-light">
+  <a
+    class="navbar-brand"
+    (click)="toggleEditor('react-form')"
+    routerLink="/react-form"
+    routerLinkActive="active"
+    >Reactive form</a
+  >
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="dropdown"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-<nav>
-  <a (click)="toggleEditor('name')" routerLink="/name" routerLinkActive="active"
-    >Name Editor</a
-  >
-  <a
-    (click)="toggleEditor('profile')"
-    routerLink="/profile"
-    routerLinkActive="active"
-    >Profile Editor</a
-  >
-  <a (click)="toggleEditor('flex')" routerLink="/flex" routerLinkActive="active"
-    >Flex Editor</a
-  >
-  <a (click)="toggleEditor('text')" routerLink="/text" routerLinkActive="active"
-    >Text Editor</a
-  >
-  <a
-    (click)="toggleEditor('flex-trial')"
-    routerLink="/flex-trial"
-    routerLinkActive="active"
-    >Flex Trial</a
-  >
-  <a (click)="toggleEditor('grid')" routerLink="/grid" routerLinkActive="active"
-    >Grid</a
-  >
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="nav navbar-nav mr-4">
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          data-value="flex"
+          routerLink="/flex"
+          routerLinkActive="active"
+          (click)="toggleEditor('flex')"
+          >Flex editor</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          data-value="text"
+          routerLink="/text"
+          routerLinkActive="active"
+          (click)="toggleEditor('text')"
+          >Text editor</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          data-value="flex trial"
+          routerLink="/flex-trial"
+          routerLinkActive="active"
+          (click)="toggleEditor('flex-trial')"
+          >Flex Trial
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          data-value="grid"
+          routerLink="/grid"
+          routerLinkActive="active"
+          (click)="toggleEditor('grid')"
+          >Grid</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          data-value="bootstrap"
+          routerLink="/bootstrap"
+          routerLinkActive="active"
+          (click)="toggleEditor('bootstrap')"
+          >Bootstrap</a
+        >
+      </li>
+    </ul>
+  </div>
 </nav>
-
-<router-outlet></router-outlet>
+<header class="header">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="description ">
+      <h1>
+        Hello ,Welcome To My official Website
+        <p>
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+          cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+          id est laborum.
+        </p>
+        <button class="btn btn-outline-secondary btn-lg">See more</button>
+      </h1>
+    </div>
+  </div>
+</header>
+<div class="container-fluid">
+  <router-outlet></router-outlet>
+</div>

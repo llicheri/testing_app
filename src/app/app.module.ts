@@ -2,33 +2,33 @@ import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 import { AppComponent } from "./app.component";
-import { NameEditorComponent } from "./name-editor/name-editor.component";
 import { ProfileEditorComponent } from "./profile-editor/profile-editor.component";
 import { FlexComponent } from "./flex/flex.component";
 import { TextComponent } from "./text/text.component";
 import { RouterModule, Routes } from "@angular/router";
 import { FlexTrialComponent } from "./flex-trial/flex-trial.component";
 import { GridComponent } from "./grid/grid.component";
+import { BootstrapComponent } from "./bootstrap/bootstrap.component";
 
 const routes: Routes = [
-  { path: "name", component: NameEditorComponent },
-  { path: "profile", component: ProfileEditorComponent },
+  { path: "react-form", component: ProfileEditorComponent },
   { path: "flex", component: FlexComponent },
   { path: "text", component: TextComponent },
   { path: "flex-trial", component: FlexTrialComponent },
   { path: "grid", component: GridComponent },
-  { path: "", redirectTo: "flex", pathMatch: "full" }
+  { path: "bootstrap", component: BootstrapComponent },
+  { path: "", redirectTo: "react-form", pathMatch: "full" }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    NameEditorComponent,
     ProfileEditorComponent,
     FlexComponent,
     TextComponent,
     FlexTrialComponent,
-    GridComponent
+    GridComponent,
+    BootstrapComponent
   ],
   imports: [
     BrowserModule,
